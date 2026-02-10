@@ -1,1 +1,6 @@
-export const LoginMainText = () => {}
+export const LoginMainText = () => {
+    return (
+        <>
+        </>
+    );
+}

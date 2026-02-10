@@ -1,5 +1,25 @@
-import { render } from 'preact'
-import './index.css'
-import { App } from './app.tsx'
+// import { StrictMode } from 'react'
+// import { createRoot } from 'react-dom/client'
+// import './index.css'
+// import App from './App.tsx'
 
-render(<App />, document.getElementById('app')!)
+// createRoot(document.getElementById('root')!).render(
+//   <StrictMode>
+//     <App />
+//   </StrictMode>,
+// )
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.tsx'
+
+// Используем правильный id
+const container = document.getElementById('app')
+if (!container) throw new Error("Root container not found")
+
+createRoot(container).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+)
